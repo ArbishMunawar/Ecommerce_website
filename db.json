@@ -1,0 +1,214 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Bamboo Basket",
+      "price": 24.99,
+      "originalPrice": 49.99,
+      "image": "images/A4.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 4.5,
+      "category": "Storage",
+      "description": "Eco-friendly bamboo basket for stylish storage.",
+      "sku": "BB-004",
+      "colors": ["Natural", "Dark Brown"],
+      "measurements": "Diameter: 12in, Height: 10in",
+      "additionalInfo": [
+        "Material: 100% natural bamboo",
+        "Use: Indoor storage only",
+        "Eco-Friendly: Yes",
+        "Weight Limit: 20 lbs"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Beige Table Lamp",
+      "price": 24.99,
+      "originalPrice": 49.99,
+      "image": "images/A3.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 4.5,
+      "category": "Lighting",
+      "description": "Elegant beige lamp for soft ambient lighting.",
+      "sku": "BTL-003",
+      "colors": ["Beige", "Brown"],
+      "measurements": "Height: 16in, Base Diameter: 5.5in",
+      "additionalInfo": [
+        "Bulb Type: E26 LED",
+        "Shade Material: Linen",
+        "Cord Length: 6ft",
+        "Warranty: 1 year limited"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Black Table",
+      "price": 24.99,
+      "originalPrice": 49.99,
+      "image": "images/A6.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 5,
+      "category": "Bedroom",
+      "description": "A minimalist table lamp perfect for bedside or study.",
+      "sku": "TL-007",
+      "colors": ["White", "Black"],
+      "measurements": "Height: 15in, Base Diameter: 6in",
+      "additionalInfo": [
+        "Bulb Type: LED compatible",
+        "Switch Type: Push button",
+        "Cord Length: 5ft",
+        "Warranty: 1 year limited"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cushion",
+      "price": 24.99,
+      "originalPrice": 49.99,
+      "image": "images/A7.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 5,
+      "category": "Bedroom",
+      "description": "A minimalist table lamp perfect for bedside or study.",
+      "sku": "TL-007",
+      "colors": ["White", "Black"],
+      "measurements": "Height: 15in, Base Diameter: 6in",
+      "additionalInfo": [
+        "Bulb Type: LED compatible",
+        "Switch Type: Push button",
+        "Cord Length: 5ft",
+        "Warranty: 1 year limited"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Loveseat Sofa",
+      "price": 199.0,
+      "originalPrice": 400.0,
+      "image": "images/A1.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 5,
+      "category": "Furniture",
+      "description": "A cozy loveseat sofa with a sleek modern design.",
+      "sku": "LS-001",
+      "colors": ["Gray", "Beige", "Blue"],
+      "measurements": "Length: 80in, Width: 35in, Height: 30in",
+      "additionalInfo": [
+        "Material: High-quality wood and fabric",
+        "Assembly: Required",
+        "Warranty: 2 years manufacturer warranty",
+        "Weight Capacity: 500 lbs"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Single sofa Sofa",
+      "price": 199.0,
+      "originalPrice": 400.0,
+      "image": "images/A10.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 5,
+      "category": "Furniture",
+      "description": "A cozy loveseat sofa with a sleek modern design.",
+      "sku": "LS-006",
+      "colors": ["Gray", "Beige", "Blue"],
+      "measurements": "Length: 80in, Width: 35in, Height: 30in",
+      "additionalInfo": [
+        "Material: High-quality wood and fabric",
+        "Assembly: Required",
+        "Warranty: 2 years manufacturer warranty",
+        "Weight Capacity: 500 lbs"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Standing Lamp",
+      "price": 24.99,
+      "originalPrice": 49.99,
+      "image": "images/A9.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 5,
+      "category": "Lighting",
+      "description": "A minimalist table lamp perfect for bedside or study.",
+      "sku": "TL-007",
+      "colors": ["White", "Black"],
+      "measurements": "Height: 15in, Base Diameter: 6in",
+      "additionalInfo": [
+        "Bulb Type: LED compatible",
+        "Switch Type: Push button",
+        "Cord Length: 5ft",
+        "Warranty: 1 year limited"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Table Lamp",
+      "price": 24.99,
+      "originalPrice": 49.99,
+      "image": "images/A2.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 4,
+      "category": "Lighting",
+      "description": "A minimalist table lamp perfect for bedside or study.",
+      "sku": "TL-002",
+      "colors": ["White", "Black"],
+      "measurements": "Height: 15in, Base Diameter: 6in",
+      "additionalInfo": [
+        "Bulb Type: LED compatible",
+        "Switch Type: Push button",
+        "Cord Length: 5ft",
+        "Warranty: 1 year limited"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Toaster",
+      "price": 224.99,
+      "originalPrice": 449.99,
+      "image": "images/A5.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 5,
+      "category": "Kitchen",
+      "description": "Premium toaster with adjustable settings and sleek look.",
+      "sku": "TO-005",
+      "colors": ["Silver", "Black"],
+      "measurements": "Width: 12in, Depth: 8in, Height: 7in",
+      "additionalInfo": [
+        "Power: 1500W",
+        "Toast Settings: 7 levels",
+        "Features: Defrost & Bagel modes",
+        "Warranty: 2 years"
+      ]
+    },
+    {
+      "id": 10,
+      "name": " White Drawer",
+      "price": 24.99,
+      "originalPrice": 49.99,
+      "image": "images/A8.png",
+      "isNew": true,
+      "discount": 50,
+      "rating": 5,
+      "category": "Bedroom",
+      "description": "A minimalist table lamp perfect for bedside or study.",
+      "sku": "TL-007",
+      "colors": ["White", "Black"],
+      "measurements": "Height: 15in, Base Diameter: 6in",
+      "additionalInfo": [
+        "Bulb Type: LED compatible",
+        "Switch Type: Push button",
+        "Cord Length: 5ft",
+        "Warranty: 1 year limited"
+      ]
+    }
+  ]
+}
