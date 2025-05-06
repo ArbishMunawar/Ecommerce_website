@@ -10,8 +10,8 @@ const RightArrow = () => {
     <path d="M43.3333 26L51.3333 34" stroke="#141718" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </g>
     <defs>
-    <filter id="filter0_d_4_11485" x="0" y="0" width="84" height="84" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <filter id="filter0_d_4_11485" x="0" y="0" width="84" height="84" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+    <feFlood floodOpacity="0" result="BackgroundImageFix"/>
     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
     <feOffset dy="8"/>
     <feGaussianBlur stdDeviation="8"/>

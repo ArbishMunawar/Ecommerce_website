@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams,useOutletContext } from "react-router-dom";
 import UseFetch from "../../../hooks/UseFetch.jsx";
 import Star from "../../../assets/icons/StarIcon.jsx";
 import Timer from "../../Common/Timer.jsx";
-import NewsLetterSection from "../../Sections/HomeSections/NewsLetterSection.jsx";
 import HeartIcon from "../../../assets/icons/HeartIcon.jsx";
 import Button from "../../Common/Button.jsx";
 import ProductAdditionalInfo from "../../Common/ProductAdditionalInfo.jsx";
@@ -13,6 +12,8 @@ const ProductDetail = () => {
   const { data, isLoading } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/products/${id}`
   );
+  const { cartItems, setCartItems } = useOutletContext();
+
 
   const [selectedColor, setSelectedColor] = useState("");
   const [count, setCount] = useState(0);
@@ -31,7 +32,14 @@ const ProductDetail = () => {
     measurements,
     sku,
     category,
+    addToCart
   } = data;
+
+  const handleAddToCart = () => {
+    const product = { id, name, image, price, originalPrice, description };
+    setCartItems(product); 
+    alert(`${name} has been added to your cart!`);
+  };
 
   const imageUrl = `${import.meta.env.VITE_REACT_APP_API_URL}/${image}`;
   const stars = Math.round(rating || 0);
@@ -128,7 +136,8 @@ const ProductDetail = () => {
             </button>
           </div>
 
-          <Button className="bg-black w-full my-5 cursor-pointer ">
+          <Button className="bg-black w-full my-5 cursor-pointer "
+           onClick={handleAddToCart}>
             Add to cart
           </Button>
 
@@ -150,7 +159,7 @@ const ProductDetail = () => {
       </div>
 
       <ProductAdditionalInfo/>
-      <NewsLetterSection />
+      {/* <NewsLetterSection /> */}
     </>
   );
 };

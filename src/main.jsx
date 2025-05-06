@@ -7,6 +7,8 @@ import Root from './App.jsx';
 import HomePage from './ui/Pages/HomePage/index.jsx';
 import ProductsDetailPage from './ui/Pages/ProductsDetailPage/index.jsx';
 import ShopPage from './ui/Pages/ShopPage/index.jsx';
+import BlogPage from './ui/Pages/BlogPage/index.jsx';
+import Cart from './ui/Pages/CartPage/index.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,8 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "/products/:id", element: <ProductsDetailPage /> },
       { path: "shop/", element: <ShopPage /> },
+      { path: "blog/", element: <BlogPage /> },
+      { path: "cart/", element: <Cart /> },
     ],
   },
 ]);

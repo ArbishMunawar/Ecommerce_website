@@ -7,15 +7,22 @@ import { Link } from "react-router-dom";
 const Card = ({
   id,
   name,
-  price,
-  originalPrice,
   image,
   isNew,
+  price,
+  rating,
   discount,
   description,
-  rating,
+  originalPrice,
+  addToCart,
 }) => {
   const stars = Math.round(rating || 0);
+
+  const handleAddToCart = () => {
+    const product = { id, name, image, price, originalPrice, description };
+    addToCart(product); 
+    alert(`${name} has been added to your cart!`);
+  };
 
   return (
     <div className="relative shadow-lg rounded bg-[#F3F5F7] w-full">
@@ -62,7 +69,7 @@ const Card = ({
 
       <div
         className="flex justify-center w-full mt-3 mb-3 cursor-pointer"
-        // onClick={() => handleClick?.({ id, name, price, image })}
+        onClick={handleAddToCart}
       >
         <Button className="bg-black w-[90%]">Add to cart</Button>
       </div>

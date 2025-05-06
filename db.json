@@ -191,7 +191,7 @@
     },
     {
       "id": 10,
-      "name": " White Drawer",
+      "name": "White Drawer",
       "price": 24.99,
       "originalPrice": 49.99,
       "image": "images/A8.png",
@@ -210,5 +210,53 @@
         "Warranty: 1 year limited"
       ]
     }
+  ],
+  "blogPosts": [
+    {
+      "title": "7 ways to decor your home like a professional",
+      "date": "October 16, 2023",
+      "image": "images/blogpost1.jpg"
+    },
+    {
+      "title": "Inside a beautiful kitchen organization",
+      "date": "October 16, 2023",
+      "image": "images/blogpost2.jpg"
+    },
+    {
+      "title": "Decor your bedroom for your children",
+      "date": "October 16, 2023",
+      "image": "images/blogpost3.jpg"
+    },
+    {
+      "title": "How to choose the best sofa for your home",
+      "date": "October 16, 2023",
+      "image": "images/blogpost4.jpg"
+    },
+    {
+      "title": "How to choose the best table for your home",
+      "date": "October 16, 2023",
+      "image": "images/blogpost5.jpg"
+    },
+    {
+      "title": "How to choose the best lamp for your home",
+      "date": "October 16, 2023",
+      "image": "images/blogpost6.jpg"
+    },
+    {
+      "title": "Small space, big style: Decorating tips for compact homes",
+      "date": "October 20, 2023",
+      "image": "images/blogpost7.jpg"
+    },
+    {
+      "title": "How to pick the perfect lighting for every room",
+      "date": "October 22, 2023",
+      "image": "images/blogpost8.jpg"
+    },
+    {
+      "title": "Eco-friendly decor ideas for a sustainable home",
+      "date": "October 25, 2023",
+      "image": "images/blogpost9.jpg"
+    }
+    
   ]
 }
