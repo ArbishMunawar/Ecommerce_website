@@ -1,7 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./ui/common/Navbar.jsx";
 import Footer from "./ui/Common/Footer.jsx"
-import NewsletterSection from "./ui/Sections/HomeSections/NewsLetterSection.jsx";
 import { useState } from "react";
 export default function Root() {
 
@@ -18,7 +17,6 @@ export default function Root() {
       <main >
       <Outlet context={{ cartItems, addToCart,setCartItems }} />
       </main>
-      <NewsletterSection />
       <Footer />
       </div>
     </>

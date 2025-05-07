@@ -34,7 +34,7 @@ const ServiceCard = () => {
       {services.map((service, index) => (
         <div
           key={index}
-          className="flex flex-col items-center text-center bg-[#F3F5F7] p-6 shadow hover:shadow-lg transition-shadow"
+          className="flex flex-col items-center text-center bg-[#F3F5F7] p-6  hover:shadow-lg transition-shadow"
         >
           <div className="mb-4 text-4xl text-[#2A2A2A]">{service.icon}</div>
           <h3 className="text-lg font-semibold mb-1">{service.title}</h3>

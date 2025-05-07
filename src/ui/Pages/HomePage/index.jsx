@@ -8,7 +8,7 @@ import FurnitureSection from '../../Sections/HomeSections/FurnitureSection.jsx'
 import ServicesSection from '../../Sections/HomeSections/ServicesSection.jsx'
 import SaleSection from "../../Sections/HomeSections/SaleSection.jsx";
 import ArticlesSection from "../../Sections/HomeSections/ArticlesSection.jsx";
-// import NewsLetterSection from "../../Sections/HomeSections/NewsLetterSection.jsx";
+import NewsLetterSection from "../../Sections/HomeSections/NewsLetterSection.jsx";
 import NewArrival from "../../Sections/HomeSections/NewArrival.jsx";
 
 const HomePage = () => {
@@ -26,7 +26,7 @@ const HomePage = () => {
   return (
     <>
     <div className="relative w-full lg:max-w-[1120px] mx-auto">
-      <div className="hidden sm:flex absolute md:top-[8rem] top-[14rem] justify-between items-center w-full px-6 z-10">
+      <div className="hidden sm:flex absolute md:top-[8rem] lg:top-[13rem] top-[14rem] justify-between items-center w-full px-6 z-10">
         <button
           className="text-white p-2 rounded-full "
           onClick={() => scrollImages("left")}
@@ -83,7 +83,7 @@ const HomePage = () => {
     <ServicesSection />
     <SaleSection />
     <ArticlesSection />
-    {/* <NewsLetterSection/> */}
+    <NewsLetterSection/>
     </>
   );
 };

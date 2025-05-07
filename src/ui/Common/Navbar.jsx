@@ -22,7 +22,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav className="bg-white w-full px-4 md:p-0 py-4 md:py-0 md:my-5 lg:max-w-[1100px] mx-auto">
+      <nav className="bg-white w-full px-4 md:px-5 py-4 md:py-0 md:my-5 lg:max-w-[1100px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between lg:max-w-[1120px] mx-auto gap-4">
           <div className="flex gap-5">
             <div className="md:hidden flex items-center">
@@ -36,7 +36,9 @@ const Navbar = () => {
             </div>
           </div>
           <div
-            className={`flex flex-col md:flex-row gap-4 md:gap-10 text-[16px] text-[#6C7275] font-normal ${showMenu ? "block" : "hidden"} md:flex`}
+            className={`flex flex-col md:flex-row gap-4 md:gap-10 text-[16px] text-[#6C7275] font-normal ${
+              showMenu ? "block" : "hidden"
+            } md:flex`}
           >
             <div className="flex gap-2 w-full justify-center md:hidden mt-4 relative">
               <input
@@ -50,10 +52,10 @@ const Navbar = () => {
             </div>
 
             <ul className="flex flex-col gap-4 w-full text-center md:flex-row md:gap-10">
-            <Link to="/">Home</Link>
+              <Link to="/">Home</Link>
               <Link to="/shop">Shop</Link>
               <Link to="/blog">Blog</Link>
-              <Link to="/cart">Cart</Link>
+              <Link to="/contact">Contact Us</Link>
             </ul>
 
             <div className="flex justify-center gap-4 text-[16px] w-full mt-4 md:hidden">
@@ -79,11 +81,11 @@ const Navbar = () => {
             </div>
             <div className="hidden md:flex items-center gap-2 ">
               <UserCircle />
-              <ShoppingIcon />
+              <Link to="/cart">
+                <ShoppingIcon />
+              </Link>
             </div>
           </div>
-
-        
         </div>
       </nav>
     </>

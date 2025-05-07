@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import blog from '../../../assets/Images/blog.jpg';
 import UseFetch from '../../../hooks/UseFetch.jsx';
 import { useSearchParams } from 'react-router-dom';
-
+import NewsLetterSection from '../../Sections/HomeSections/NewsLetterSection.jsx'
 const BlogPage = () => {
   const [searchParams] = useSearchParams();
   const { data: blogPosts, isLoading } = UseFetch(
@@ -27,6 +27,7 @@ const BlogPage = () => {
 
   const sortedPosts = getSortedPosts();
   return (
+    <>
     <div className="max-w-[1120px] mx-auto">
       <div className="relative">
         <img
@@ -77,6 +78,8 @@ const BlogPage = () => {
         )}
       </div>
     </div>
+    <NewsLetterSection/>
+    </>
   );
 };
 

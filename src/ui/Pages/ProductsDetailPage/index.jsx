@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import { useParams,useOutletContext } from "react-router-dom";
+import { useParams, useOutletContext } from "react-router-dom";
 import UseFetch from "../../../hooks/UseFetch.jsx";
 import Star from "../../../assets/icons/StarIcon.jsx";
 import Timer from "../../Common/Timer.jsx";
 import HeartIcon from "../../../assets/icons/HeartIcon.jsx";
 import Button from "../../Common/Button.jsx";
 import ProductAdditionalInfo from "../../Common/ProductAdditionalInfo.jsx";
-
+import NewsLetterSection from '../../Sections/HomeSections/NewsLetterSection.jsx'
 const ProductDetail = () => {
   const { id } = useParams();
   const { data, isLoading } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/products/${id}`
   );
-  const { cartItems, setCartItems } = useOutletContext();
-
+  const { addToCart } = useOutletContext();
 
   const [selectedColor, setSelectedColor] = useState("");
   const [count, setCount] = useState(0);
@@ -32,13 +31,29 @@ const ProductDetail = () => {
     measurements,
     sku,
     category,
-    addToCart
   } = data;
 
   const handleAddToCart = () => {
-    const product = { id, name, image, price, originalPrice, description };
-    setCartItems(product); 
+    if (count === 0) {
+      alert("Please select a quantity before adding to cart.");
+      return;
+    }
+
+    const product = {
+      id,
+      name,
+      image,
+      price,
+      originalPrice,
+      description,
+      color: selectedColor,
+      quantity: count,
+    };
+
+    addToCart(product);
     alert(`${name} has been added to your cart!`);
+    // console.log("Product added to cart:", product);
+    
   };
 
   const imageUrl = `${import.meta.env.VITE_REACT_APP_API_URL}/${image}`;
@@ -110,21 +125,18 @@ const ProductDetail = () => {
           )}
 
           <div className="mt-4 flex gap-7 justify-between">
-            <div className="flex  gap-4 bg-[#F3F5F7] rounded">
+            <div className="flex gap-4 bg-[#F3F5F7] rounded">
               <button
-                className="font-bold text-2xl  px-4  cursor-pointer"
+                className="font-bold text-2xl px-4 cursor-pointer"
                 onClick={() =>
-                  setCount((prev) => {
-                    if (prev > 0) return prev - 1;
-                    else return (prev = 0);
-                  })
+                  setCount((prev) => (prev > 0 ? prev - 1 : 0))
                 }
               >
                 -
               </button>
-              <p className="flex items-center ">{count}</p>
+              <p className="flex items-center">{count}</p>
               <button
-                className="font-bold text-2xl pl-3 pr-3 cursor-pointer "
+                className="font-bold text-2xl pl-3 pr-3 cursor-pointer"
                 onClick={() => setCount((prev) => prev + 1)}
               >
                 +
@@ -136,14 +148,19 @@ const ProductDetail = () => {
             </button>
           </div>
 
-          <Button className="bg-black w-full my-5 cursor-pointer "
-           onClick={handleAddToCart}>
+          <Button
+            className="bg-black w-full my-5 cursor-pointer"
+            onClick={() => {
+              console.log("Add to cart clicked");
+              handleAddToCart();
+            }}
+          >
             Add to cart
           </Button>
 
           <div className="text-xs border-t border-gray-300">
             {sku && (
-              <div className="mt-4 flex gap-2  items-center">
+              <div className="mt-4 flex gap-2 items-center">
                 <span className="text-gray-600">SKU:</span>
                 <span className="text-gray-800">{sku}</span>
               </div>
@@ -158,8 +175,8 @@ const ProductDetail = () => {
         </div>
       </div>
 
-      <ProductAdditionalInfo/>
-      {/* <NewsLetterSection /> */}
+      <ProductAdditionalInfo />
+      <NewsLetterSection />
     </>
   );
 };

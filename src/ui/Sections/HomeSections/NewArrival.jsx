@@ -12,8 +12,8 @@ const NewArrival = () => {
     <section className="w-full xl:pl-68 mx-auto mt-10 px-4 my-[4rem]">
       <h2 className="text-2xl font-semibold my-4">New Arrivals</h2>
 
-      <div className="overflow-x-auto">
-        <div className="flex gap-10 w-max">
+      <div className="overflow-x-auto ">
+        <div className="flex gap-10 w-max ">
           {isLoading ? (
             <p>Loading...</p>
           ) : data && data.length > 0 ? (
