@@ -51,17 +51,25 @@ const Navbar = () => {
               </button>
             </div>
 
-            <ul className="flex flex-col gap-4 w-full text-center md:flex-row md:gap-10">
+            <ul className="flex flex-col gap-4 w-full  md:flex-row md:gap-10">
               <Link to="/">Home</Link>
+              <hr className="text-gray-400" />
               <Link to="/shop">Shop</Link>
+              <hr className="text-gray-400" />
               <Link to="/blog">Blog</Link>
+              <hr className="text-gray-400" />
               <Link to="/contact">Contact Us</Link>
+              <hr className="text-gray-400" />
             </ul>
 
-            <div className="flex justify-center gap-4 text-[16px] w-full mt-4 md:hidden">
+            <div className="pt-[6rem] md:p-0 ">
+              <div className="flex justify-center gap-4 text-[16px] w-full mt-4 md:hidden">
               <UserCircle />
-
               <ShoppingIcon />
+              </div>
+              <div>
+              <button className="text-white bg-black w-full p-3 rounded-lg md:mt-5 md:hidden">Sign In</button>
+              </div>
             </div>
           </div>
 
@@ -82,8 +90,9 @@ const Navbar = () => {
             <div className="hidden md:flex items-center gap-2 ">
               <UserCircle />
               <Link to="/cart">
-                <ShoppingIcon />
+                <ShoppingIcon /> 
               </Link>
+
             </div>
           </div>
         </div>
