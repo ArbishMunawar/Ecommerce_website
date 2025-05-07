@@ -71,7 +71,7 @@ const Card = ({
         className="flex justify-center w-full mt-3 mb-3 cursor-pointer"
         onClick={handleAddToCart}
       >
-        <Button className="bg-black w-[90%]">Add to cart</Button>
+        <Button className="bg-black w-[90%] cursor-pointer">Add to cart</Button>
       </div>
     </div>
   );

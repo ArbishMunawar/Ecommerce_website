@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import ShopPageImage from "../../../assets/Images/Shoppage.jpg";
 import Card from "../../Common/Card";
 import UseFetch from "../../../hooks/UseFetch.jsx";
+import { useOutletContext  } from 'react-router-dom';
 import NewsLetterSection from "../../Sections/HomeSections/NewsLetterSection.jsx";
 
 const ShopPage = () => {
+  const { addToCart } = useOutletContext();
   const { data } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/products`
   );
@@ -13,6 +15,8 @@ const ShopPage = () => {
 
   const filteredProducts =
     selectedCategory === "All" ? data : data.filter((product) => product.category === selectedCategory);
+
+    
   return (
     <>
       <div className="max-w-[1120px] mx-auto">
@@ -53,9 +57,9 @@ const ShopPage = () => {
           </div>
 
           <div className="p-6 md:p-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 ">
               {filteredProducts.map(({ id, ...product }) => (
-                <Card key={id} id={id} {...product} />
+                <Card key={id} id={id} {...product} addToCart={addToCart}/>
               ))}
             </div>
           </div>
