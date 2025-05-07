@@ -64,11 +64,18 @@ const Navbar = () => {
 
             <div className="pt-[6rem] md:p-0 ">
               <div className="flex justify-center gap-4 text-[16px] w-full mt-4 md:hidden">
-              <UserCircle />
-              <ShoppingIcon />
+              <Link to="/account">
+                <UserCircle />
+              </Link>
+
+              <Link to="/cart">
+                <ShoppingIcon />
+              </Link>
               </div>
               <div>
-              <button className="text-white bg-black w-full p-3 rounded-lg md:mt-5 md:hidden">Sign In</button>
+                <button className="text-white bg-black w-full p-3 rounded-lg md:mt-5 md:hidden">
+                  Sign In
+                </button>
               </div>
             </div>
           </div>
@@ -88,11 +95,13 @@ const Navbar = () => {
               )}
             </div>
             <div className="hidden md:flex items-center gap-2 ">
-              <UserCircle />
-              <Link to="/cart">
-                <ShoppingIcon /> 
+              <Link to="/account">
+                <UserCircle />
               </Link>
 
+              <Link to="/cart">
+                <ShoppingIcon />
+              </Link>
             </div>
           </div>
         </div>

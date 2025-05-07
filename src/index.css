@@ -3,3 +3,13 @@
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .layout main {
+    flex-grow: 1;
+  }

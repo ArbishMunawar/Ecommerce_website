@@ -10,6 +10,7 @@ import ShopPage from './ui/Pages/ShopPage/index.jsx';
 import BlogPage from './ui/Pages/BlogPage/index.jsx';
 import Cart from './ui/Pages/CartPage/index.jsx';
 import ContactUs from './ui/Pages/Contactus/index.jsx';
+import MyAccountPage from './ui/Pages/MyAccountPage/index.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "blog/", element: <BlogPage /> },
       { path: "cart/", element: <Cart /> },
       { path: "contact/", element: <ContactUs /> },
+      { path: "account/", element: <MyAccountPage /> },
     ],
   },
 ]);
