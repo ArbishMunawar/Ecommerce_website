@@ -1,16 +1,16 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { RouterProvider, createBrowserRouter } from "react-router";
 
-import './index.css';
-import Root from './App.jsx'; 
-import HomePage from './ui/Pages/HomePage/index.jsx';
-import ProductsDetailPage from './ui/Pages/ProductsDetailPage/index.jsx';
-import ShopPage from './ui/Pages/ShopPage/index.jsx';
-import BlogPage from './ui/Pages/BlogPage/index.jsx';
-import Cart from './ui/Pages/CartPage/index.jsx';
-import ContactUs from './ui/Pages/Contactus/index.jsx';
-import MyAccountPage from './ui/Pages/MyAccountPage/index.jsx';
+import "./index.css";
+import Root from "./App.jsx";
+import HomePage from "./ui/Pages/homePage/index.jsx";
+import ProductsDetailPage from "./ui/Pages/productsDetailPage/index.jsx";
+import ShopPage from "./ui/Pages/shopPage/index.jsx";
+import BlogPage from "./ui/Pages/blogPage/index.jsx";
+import Cart from "./ui/Pages/cartPage/index.jsx";
+import ContactUs from "./ui/Pages/contactus/index.jsx";
+import MyAccountPage from "./ui/Pages/myAccountPage/index.jsx";
 // import SignIn from './ui/Pages/SignInPage/index.jsx';
 
 const router = createBrowserRouter([
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
   },
 ]);
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>

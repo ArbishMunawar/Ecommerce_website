@@ -5,7 +5,7 @@ import UseFetch from "../../../hooks/UseFetch.jsx";
 import { useOutletContext  } from 'react-router-dom';
 import NewsLetterSection from "../../Sections/homeSections/NewsLetterSection.jsx";
 
-const ShopPage = () => {
+const shopPage = () => {
   const { addToCart } = useOutletContext();
   const { data } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/products`
@@ -24,7 +24,7 @@ const ShopPage = () => {
           <img
             src={ShopPageImage}
             alt="ShopPageImage"
-            className="w-full h-80 md:h-full object-cover p-8"
+            className="w-full h-96 md:full lg:full object-cover p-5" 
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold pb-4">
@@ -33,11 +33,11 @@ const ShopPage = () => {
             <p className="text-sm md:text-base">
               Let’s design the place you always imagined.
             </p>
-          </div>
+          </div> 
         </div>
 
-        <div className="flex justify-center  gap-2 mt-4 mb-4">
-          <div>
+        <div className="flex flex-col md:flex-row gap-4 mt-4 mb-4 px-4">
+          <div className="md:w-1/4 w-full">
             <div className=" flex flex-col gap-3 mt-6 mb-6 px-4">
               <h2 className="text-md mb-3 font-semibold">CATEGORIES</h2>
               {Categories.map((category) => (
@@ -56,8 +56,8 @@ const ShopPage = () => {
             </div>
           </div>
 
-          <div className="p-6 md:p-8">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 ">
+          <div className="md:w-3/4 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 ">
               {filteredProducts.map(({ id, ...product }) => (
                 <Card key={id} id={id} {...product} addToCart={addToCart}/>
               ))}
@@ -70,4 +70,4 @@ const ShopPage = () => {
   );
 };
 
-export default ShopPage;
+export default shopPage;

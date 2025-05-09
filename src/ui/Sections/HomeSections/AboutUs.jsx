@@ -1,5 +1,5 @@
 import React from "react";
-import Sale from "../../../assets/Images/Sale.png";
+import Sale from "../../../assets/images/Sale.png";
 const AboutUs = () => {
   return (
     <section className="md:grid md:grid-cols-2 bg-[#F3F5F7] ">

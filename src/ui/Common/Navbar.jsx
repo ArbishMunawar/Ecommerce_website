@@ -6,7 +6,7 @@ import SearchIcon from "../../assets/icons/SearchIcon.jsx";
 import TicketPercent from "../../assets/icons/TicketPercent.jsx";
 import CrossIcon from "../../assets/icons/CrossIcon.jsx";
 import MenuIcon from "../../assets/icons/MenuIcon.jsx";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
