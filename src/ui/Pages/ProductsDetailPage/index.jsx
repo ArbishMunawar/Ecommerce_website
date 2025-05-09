@@ -3,10 +3,10 @@ import React, { useState } from "react";
 import { useParams, useOutletContext } from "react-router-dom";
 import UseFetch from "../../../hooks/UseFetch.jsx";
 import Star from "../../../assets/icons/StarIcon.jsx";
-import Timer from "../../Common/Timer.jsx";
+import Timer from "../../common/Timer.jsx";
 import HeartIcon from "../../../assets/icons/HeartIcon.jsx";
-import Button from "../../Common/Button.jsx";
-import ProductAdditionalInfo from "../../Common/ProductAdditionalInfo.jsx";
+import Button from "../../common/Button.jsx";
+import ProductAdditionalInfo from "../../common/ProductAdditionalInfo.jsx";
 import NewsLetterSection from '../../Sections/HomeSections/NewsLetterSection.jsx'
 const ProductDetail = () => {
   const { id } = useParams();

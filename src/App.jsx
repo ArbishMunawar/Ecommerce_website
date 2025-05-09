@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./ui/common/Navbar.jsx";
-import Footer from "./ui/Common/Footer.jsx"
+import Footer from "./ui/common/Footer.jsx"
 import { useState } from "react";
 export default function Root() {
 

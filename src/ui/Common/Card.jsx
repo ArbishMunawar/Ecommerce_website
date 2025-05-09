@@ -1,7 +1,7 @@
 import React from "react";
 import HeartIcon from "../../assets/icons/HeartIcon.jsx";
 import Star from "../../assets/icons/StarIcon.jsx";
-import Button from "../Common/Button.jsx";
+import Button from "./Button.jsx";
 import { Link } from "react-router-dom";
 
 const Card = ({

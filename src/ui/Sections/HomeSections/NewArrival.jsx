@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../../Common/Card';
+import Card from '../../common/Card.jsx';
 import UseFetch from '../../../hooks/UseFetch.jsx';
 import { useSearchParams,useOutletContext  } from 'react-router-dom';
 const NewArrival = () => {

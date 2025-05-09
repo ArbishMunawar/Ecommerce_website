@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ShopPageImage from "../../../assets/Images/Shoppage.jpg";
-import Card from "../../Common/Card";
+import Card from "../../common/Card.jsx";
 import UseFetch from "../../../hooks/UseFetch.jsx";
 import { useOutletContext  } from 'react-router-dom';
 import NewsLetterSection from "../../Sections/HomeSections/NewsLetterSection.jsx";
@@ -65,7 +65,6 @@ const ShopPage = () => {
           </div>
         </div>
       </div>
-
       <NewsLetterSection />
     </>
   );

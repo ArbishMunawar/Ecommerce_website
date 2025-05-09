@@ -11,6 +11,7 @@ import BlogPage from './ui/Pages/BlogPage/index.jsx';
 import Cart from './ui/Pages/CartPage/index.jsx';
 import ContactUs from './ui/Pages/Contactus/index.jsx';
 import MyAccountPage from './ui/Pages/MyAccountPage/index.jsx';
+// import SignIn from './ui/Pages/SignInPage/index.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "cart/", element: <Cart /> },
       { path: "contact/", element: <ContactUs /> },
       { path: "account/", element: <MyAccountPage /> },
+      // { path: "signin/", element: <SignIn /> },
     ],
   },
 ]);

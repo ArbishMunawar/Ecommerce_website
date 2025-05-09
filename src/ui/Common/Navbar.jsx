@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Logo from "../../assets/icons/NavLogo.jsx";
-import UserCircle from "../../assets/icons/UserCircle";
-import ShoppingIcon from "../../assets/icons/ShoppingIcon";
-import SearchIcon from "../../assets/icons/SearchIcon";
+import UserCircle from "../../assets/icons/UserCircle.jsx";
+import ShoppingIcon from "../../assets/icons/ShoppingIcon.jsx";
+import SearchIcon from "../../assets/icons/SearchIcon.jsx";
 import TicketPercent from "../../assets/icons/TicketPercent.jsx";
 import CrossIcon from "../../assets/icons/CrossIcon.jsx";
 import MenuIcon from "../../assets/icons/MenuIcon.jsx";
