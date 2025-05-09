@@ -1,8 +1,8 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import blog from '../../../assets/Images/blog.jpg';
 import UseFetch from '../../../hooks/UseFetch.jsx';
 import { useSearchParams } from 'react-router-dom';
-import NewsLetterSection from '../../Sections/HomeSections/NewsLetterSection.jsx'
+import NewsLetterSection from '../../Sections/homeSections/NewsLetterSection.jsx'
 const BlogPage = () => {
   const [searchParams] = useSearchParams();
   const { data: blogPosts, isLoading } = UseFetch(

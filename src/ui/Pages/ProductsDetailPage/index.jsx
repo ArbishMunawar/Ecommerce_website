@@ -7,7 +7,7 @@ import Timer from "../../common/Timer.jsx";
 import HeartIcon from "../../../assets/icons/HeartIcon.jsx";
 import Button from "../../common/Button.jsx";
 import ProductAdditionalInfo from "../../common/ProductAdditionalInfo.jsx";
-import NewsLetterSection from '../../Sections/HomeSections/NewsLetterSection.jsx'
+import NewsLetterSection from '../../Sections/homeSections/NewsLetterSection.jsx'
 const ProductDetail = () => {
   const { id } = useParams();
   const { data, isLoading } = UseFetch(

@@ -1,9 +1,9 @@
 import React from "react";
-import AboutUs from "../../Sections/HomeSections/AboutUs";
+import AboutUs from "../../Sections/homeSections/AboutUs";
 import AddressIcon from "../../../assets/icons/AddressIcon";
 import EmailIcon from "../../../assets/icons/EmailIcon";
 import ContactIcon from "../../../assets/icons/ContactUs";
-import ServicesSection from '../../Sections/HomeSections/ServicesSection'
+import ServicesSection from '../../Sections/homeSections/ServicesSection'
 
 const ContactUs = () => {
   return (

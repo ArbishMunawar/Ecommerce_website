@@ -3,7 +3,7 @@ import ShopPageImage from "../../../assets/Images/Shoppage.jpg";
 import Card from "../../common/Card.jsx";
 import UseFetch from "../../../hooks/UseFetch.jsx";
 import { useOutletContext  } from 'react-router-dom';
-import NewsLetterSection from "../../Sections/HomeSections/NewsLetterSection.jsx";
+import NewsLetterSection from "../../Sections/homeSections/NewsLetterSection.jsx";
 
 const ShopPage = () => {
   const { addToCart } = useOutletContext();

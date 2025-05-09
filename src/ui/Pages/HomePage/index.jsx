@@ -4,12 +4,12 @@ import Placeholder2 from "../../../assets/Images/P2.avif";
 import Placeholder3 from "../../../assets/Images/P3.avif";
 import LeftArrow from "../../../assets/icons/LeftArrow.jsx";
 import RightArrow from "../../../assets/icons/RightArrow.jsx";
-import FurnitureSection from '../../Sections/HomeSections/FurnitureSection.jsx'
-import ServicesSection from '../../Sections/HomeSections/ServicesSection.jsx'
-import SaleSection from "../../Sections/HomeSections/SaleSection.jsx";
-import ArticlesSection from "../../Sections/HomeSections/ArticlesSection.jsx";
-import NewsLetterSection from "../../Sections/HomeSections/NewsLetterSection.jsx";
-import NewArrival from "../../Sections/HomeSections/NewArrival.jsx";
+import FurnitureSection from '../../Sections/homeSections/FurnitureSection.jsx'
+import ServicesSection from '../../Sections/homeSections/ServicesSection.jsx'
+import SaleSection from "../../Sections/homeSections/SaleSection.jsx";
+import ArticlesSection from "../../Sections/homeSections/ArticlesSection.jsx";
+import NewsLetterSection from "../../Sections/homeSections/NewsLetterSection.jsx";
+import NewArrival from "../../Sections/homeSections/NewArrival.jsx";
 
 const HomePage = () => {
   const scrollRef = useRef(null);
