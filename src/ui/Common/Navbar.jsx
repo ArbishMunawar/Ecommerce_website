@@ -6,7 +6,7 @@ import SearchIcon from "../../assets/icons/SearchIcon.jsx";
 import TicketPercent from "../../assets/icons/TicketPercent.jsx";
 import CrossIcon from "../../assets/icons/CrossIcon.jsx";
 import MenuIcon from "../../assets/icons/MenuIcon.jsx";
-import { Link } from "react-router";
+import { Link,NavLink  } from "react-router";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
@@ -51,14 +51,14 @@ const Navbar = () => {
               </button>
             </div>
 
-            <ul className="flex flex-col gap-4 w-full  md:flex-row md:gap-10">
-              <Link to="/">Home</Link>
+            <ul className="flex flex-col gap-2 w-full  md:flex-row md:gap-5">
+              <NavLink to="/"  className={({ isActive }) => isActive ? "text-black font-bold " : ""}>Home</NavLink>
               <hr className="text-gray-400" />
-              <Link to="/shop">Shop</Link>
+              <NavLink to="/shop"  className={({ isActive }) => isActive ? "text-black font-bold " : ""}>Shop</NavLink>
               <hr className="text-gray-400" />
-              <Link to="/blog">Blog</Link>
+              <NavLink to="/blog"  className={({ isActive }) => isActive ? "text-black font-bold " : ""}>Blog</NavLink>
               <hr className="text-gray-400" />
-              <Link to="/contact">Contact Us</Link>
+              <NavLink to="/contact"  className={({ isActive }) => isActive ? "text-black font-bold " : ""}>Contact Us</NavLink>
               <hr className="text-gray-400" />
             </ul>
 
