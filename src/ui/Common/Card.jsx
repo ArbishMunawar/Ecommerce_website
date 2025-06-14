@@ -2,8 +2,8 @@ import React from "react";
 import HeartIcon from "../../assets/icons/HeartIcon.jsx";
 import Star from "../../assets/icons/StarIcon.jsx";
 import Button from "./Button.jsx";
-import { Link } from "react-router-dom";
-
+import { Link } from "react-router";
+import { Toaster, toast } from 'sonner';
 const Card = ({
   id,
   name,
@@ -21,7 +21,7 @@ const Card = ({
   const handleAddToCart = () => {
     const product = { id, name, image, price, originalPrice, description };
     addToCart(product); 
-    alert(`${name} has been added to your cart!`);
+    toast.success(`${name} has been added to your cart!`);
   };
 
   return (
@@ -73,6 +73,7 @@ const Card = ({
       >
         <Button className="bg-black w-[90%] cursor-pointer">Add to cart</Button>
       </div>
+        <Toaster />
     </div>
   );
 };

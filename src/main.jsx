@@ -5,13 +5,14 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 import "./index.css";
 import Root from "./App.jsx";
 import HomePage from "./ui/Pages/homePage/index.jsx";
-import ProductsDetailPage from "./ui/Pages/productsDetailPage/index.jsx";
-import ShopPage from "./ui/Pages/shopPage/index.jsx";
+import ProductsDetailPage from "./ui/Pages/ProductsDetailPage/index.jsx";
+import ShopPage from "./ui/Pages/ShopPage/index.jsx";
 import BlogPage from "./ui/Pages/blogPage/index.jsx";
 import Cart from "./ui/Pages/cartPage/index.jsx";
 import ContactUs from "./ui/Pages/contactus/index.jsx";
 import MyAccountPage from "./ui/Pages/myAccountPage/index.jsx";
-// import SignIn from './ui/Pages/SignInPage/index.jsx';
+import {CartProvider} from './hooks/useContext/cartContext.jsx';
+import {SearchProvider} from './hooks/useContext/searchContet.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <CartProvider>
+      <SearchProvider>
     <RouterProvider router={router} />
+    </SearchProvider>
+    </CartProvider>
   </StrictMode>
 );

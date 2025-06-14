@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import blog from '../../../assets/Images/blog.jpg';
 import UseFetch from '../../../hooks/UseFetch.jsx';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router';
 import NewsLetterSection from '../../Sections/homeSections/NewsLetterSection.jsx'
 const BlogPage = () => {
   const [searchParams] = useSearchParams();

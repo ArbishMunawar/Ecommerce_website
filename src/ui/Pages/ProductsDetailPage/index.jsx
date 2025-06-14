@@ -1,6 +1,5 @@
-
-import React, { useState } from "react";
-import { useParams, useOutletContext } from "react-router-dom";
+import React, { useState,useContext } from "react";
+import { useParams } from "react-router";
 import UseFetch from "../../../hooks/UseFetch.jsx";
 import Star from "../../../assets/icons/StarIcon.jsx";
 import Timer from "../../common/Timer.jsx";
@@ -8,12 +7,15 @@ import HeartIcon from "../../../assets/icons/HeartIcon.jsx";
 import Button from "../../common/Button.jsx";
 import ProductAdditionalInfo from "../../common/ProductAdditionalInfo.jsx";
 import NewsLetterSection from '../../Sections/homeSections/NewsLetterSection.jsx'
+import { CartContext } from "../../../hooks/useContext/cartContext.jsx";
+import { Toaster, toast } from 'sonner';
+
 const ProductDetail = () => {
   const { id } = useParams();
   const { data, isLoading } = UseFetch(
     `${import.meta.env.VITE_REACT_APP_API_URL}/products/${id}`
   );
-  const { addToCart } = useOutletContext();
+  const { addToCart } = useContext(CartContext);
 
   const [selectedColor, setSelectedColor] = useState("");
   const [count, setCount] = useState(0);
@@ -36,15 +38,16 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     if (count === 0) {
-      alert("Please select a quantity before adding to cart.");
+      toast.error("Please select a quantity before adding to cart."); // Using toast for error message
       return;
     }
+  const totalPrice = price * count;
 
     const product = {
       id,
       name,
       image,
-      price,
+      price: totalPrice,
       originalPrice,
       description,
       color: selectedColor,
@@ -52,8 +55,7 @@ const ProductDetail = () => {
     };
 
     addToCart(product);
-    alert(`${name} has been added to your cart!`);
-    // console.log("Product added to cart:", product);
+      toast.success(`${name} has been added to your cart!`);
     
   };
 
@@ -174,6 +176,7 @@ const ProductDetail = () => {
             )}
           </div>
         </div>
+        <Toaster/>
       </div>
 
       <ProductAdditionalInfo />

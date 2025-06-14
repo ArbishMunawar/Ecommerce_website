@@ -1,12 +1,25 @@
-import React, { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import React, { useState,useContext } from "react";
+import { CartContext } from "../../../hooks/useContext/cartContext";
+
 
 const CartPage = () => {
-  const { cartItems, setCartItems } = useOutletContext();
+  const { cartItems, setCartItems } = useContext(CartContext);
 
   const removeFromCart = (id) => {
     setCartItems(cartItems.filter((item) => item.id !== id));
   };
+
+
+   const updateQuantity = (id, newQuantity) => {
+    setCartItems(cartItems.map((item) => {
+      if (item.id === id) {
+        // Update the quantity and price based on the new quantity
+        return { ...item, quantity: newQuantity, price: item.originalPrice * newQuantity };
+      }
+      return item;
+    }));
+  };
+
 
   if (cartItems.length === 0) {
     return <p className="p-6 text-center text-lg">Your cart is empty.</p>;
@@ -54,7 +67,7 @@ const CartPage = () => {
                   <button
                     className="font-bold text-2xl px-4 cursor-pointer"
                     onClick={() =>
-                      setCount((prev) => (prev > 0 ? prev - 1 : 0))
+                      updateQuantity(item.id, Math.max(item.quantity - 1, 1))
                     }
                   >
                     -
@@ -62,7 +75,7 @@ const CartPage = () => {
                   <p className="flex items-center">{count}</p>
                   <button
                     className="font-bold text-2xl px-4 cursor-pointer"
-                    onClick={() => setCount((prev) => prev + 1)}
+                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
                   >
                     +
                   </button>
@@ -118,14 +131,14 @@ const CartPage = () => {
 
           <div className="flex justify-between mb-3 text-gray-600">
             <span>Subtotal</span>
-            <span>$1234.00</span>
+            <span>${cartItems.reduce((total, item) => total + item.price, 0)}</span>
           </div>
 
           <hr className="my-4 border-gray-300" />
 
           <div className="flex justify-between items-center text-lg font-semibold text-gray-800">
             <span>Total</span>
-            <span>$1345.00</span>
+                     <span>${cartItems.reduce((total, item) => total + item.price, 0)}</span>
           </div>
 
           <button className="w-full mt-6 bg-black text-white py-3 rounded-xl hover:bg-gray-900 transition">

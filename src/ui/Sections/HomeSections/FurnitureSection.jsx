@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router'
 import Living from "../../../assets/Images/Living.png";
 import Bedroom from "../../../assets/Images/Bedroom.png";
 import Kitchen from "../../../assets/Images/Kitchen.png";
@@ -11,7 +12,13 @@ const FurnitureSection = () => {
           <h2 className="absolute top-8 px-8 text-2xl font-semibold">
             Living Room
           </h2>
-          <button className="absolute top-18 underline px-8 text-sm">Shop Now</button>
+          <Link
+            to="/shop?category=Living Room"
+           
+            className="absolute top-18 underline px-8 text-sm"
+          >
+            Shop Now
+          </Link>
         </div>
 
         <div className="mt-6">
@@ -21,7 +28,13 @@ const FurnitureSection = () => {
             <h2 className="absolute top-25 px-8 text-2xl font-semibold">
               Bedroom
             </h2>
-            <button className="absolute top-34 underline px-8 text-sm">Shop Now</button>
+             <Link
+              to="/shop?category=Bedroom"
+          
+              className="absolute top-34 underline px-8 text-sm"
+            >
+              Shop Now
+            </Link>
           </div>
 
           <div className="relative mt-6">
@@ -30,7 +43,13 @@ const FurnitureSection = () => {
             <h2 className="absolute top-25 px-8 text-2xl font-semibold">
               Kitchen
             </h2>
-            <button className="absolute top-34 underline px-8 text-sm">Shop Now</button>
+             <Link
+              to="/shop?category=Kitchen"
+             
+              className="absolute top-34 underline px-8 text-sm"
+            >
+              Shop Now
+            </Link>
           </div>
         </div>
       </div>
@@ -39,3 +58,7 @@ const FurnitureSection = () => {
 };
 
 export default FurnitureSection;
+
+
+
+

@@ -13,3 +13,15 @@
   .layout main {
     flex-grow: 1;
   }
+
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+background-color: #cbd5e1; 
+margin-right: 3rem;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: gray; 
+  border-radius: 9999px;
+}
