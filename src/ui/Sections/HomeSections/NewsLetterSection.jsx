@@ -4,12 +4,12 @@ import sofa from "../../../assets/Images/sofa2.png";
 
 const NewsLetterSection = () => {
   return (
-    <section className="relative bg-gray-100 py-10 px-6 overflow-hidden">
+    <section className="relative bg-gray-100 py-10 px-6 lg:py-16 lg:pb-20 overflow-hidden">
       <div>
         <img
           src={drawer}
           alt="Drawer"
-          className="hidden md:block absolute left-[-170px] top-1/2 transform -translate-y-1/2 w-[400px] h-[400px] object-contain"
+          className="hidden md:block absolute left-[-170px] top-1/2 transform -translate-y-1/2 w-[500px] h-[500px] object-contain"
         />
       </div>
       <div className="relative z-10">

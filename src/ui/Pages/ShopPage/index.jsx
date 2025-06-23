@@ -66,6 +66,10 @@ const shopPage = () => {
                 </button>
               ))}
             </div>
+
+            {/* <div>
+              here will come the filters
+            </div> */}
           </div>
 
           <div className="md:w-3/4 w-full">
